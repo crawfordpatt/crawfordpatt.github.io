@@ -8,6 +8,36 @@
     <title>Covid-19</title>
 </head>
 <body>
-    <h1>Covid-19</h1>
+    <div class="sticky">Learn more at <a href="https://www.who.int/">who.int</a></div>
+    <br>
+    <h1>Covid-19 Information</h1>
+    <h3>Courtesy of the:</h3>
+    <img id="WHO" src="https://www.who.int/images/default-source/default-album/who-logo-rgb.png?sfvrsn=b7d5da59_0" alt="WHO logo">
+    <br>
+    <div>
+        <h2 class="stats" id="deathsDiv"></h2>
+        <h2 class="stats" id="confirmedDiv"></h2>
+        <h2 class="stats" id="casesPerMillionDiv"></h2>
+    </div>
+    <script>
+        const api_url = "http://corona-api.com/countries/US";
+        async function getData() {
+            const response = await fetch(api_url);
+            const data = await response.json();
+            console.log(data);
+            console.log(data.data.today.confirmed);
+            const latestData = data.data.latest_data;
+            console.log(latestData);
+            const deaths = latestData.deaths;
+            const confirmed = latestData.confirmed;
+            const casesPerMillion = latestData.calculated.cases_per_million_population;
+
+            document.getElementById("deathsDiv").innerHTML = "Total Deaths: " + deaths;
+            document.getElementById("confirmedDiv").innerHTML = "Total Confirmed Cases: " + confirmed;
+            document.getElementById("casesPerMillionDiv").innerHTML = "Cases per Million: " + casesPerMillion;
+        }
+
+        getData();
+    </script>
 </body>
 </html>

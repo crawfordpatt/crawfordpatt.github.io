@@ -24,3 +24,39 @@ body {
     margin: 2%;
     font-size: 200%;
 }
+.infoBox {
+    max-width: 60%;
+    margin-left: 20%;
+    margin-top: 100px;
+
+}
+.infoText {
+    font-size: 25px;
+    text-align: left;
+}
+.nav {
+    text-align: left;
+    list-style: inside;
+    margin-left: 40%;
+    margin-right: 40%;
+    border-style: solid;
+    border-width: 5px;
+    padding: 10px;
+}
+#PList {
+    text-align: left;
+    list-style: inside;
+    font-size: 20px;
+}
+.final {
+    border-style: solid;
+    border-width: 10px;
+    padding: 5px;
+}
+#finalWHO {
+    margin-top: 100px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    float: right;
+    width: 200px;
+}

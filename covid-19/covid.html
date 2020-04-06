@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="covid.css" type="text/css">
     <title>Covid-19</title>
+    <script src="covid.js"></script>
 </head>
 
 <body>
@@ -18,29 +19,10 @@
         alt="WHO logo">
     <br>
     <div>
-        <h2 class="stats" id="deathsDiv"></h2>
+        <h2 id="deathsDiv" class="stats"></h2>
         <h2 class="stats" id="confirmedDiv"></h2>
         <h2 class="stats" id="casesPerMillionDiv"></h2>
     </div>
-    <script>
-        const api_url = "http://corona-api.com/countries/US";
-        async function getData() {
-            const response = await fetch(api_url);
-            const data = await response.json();
-            console.log(data);
-            const latestData = data.data.latest_data;
-            console.log(latestData);
-            const deaths = latestData.deaths;
-            const confirmed = latestData.confirmed;
-            const casesPerMillion = latestData.calculated.cases_per_million_population;
-
-            document.getElementById("deathsDiv").innerHTML = "Total Deaths (U.S): " + deaths;
-            document.getElementById("confirmedDiv").innerHTML = "Total US Confirmed Cases (U.S): " + confirmed;
-            document.getElementById("casesPerMillionDiv").innerHTML = "Cases per Million (U.S): " + casesPerMillion;
-        }
-
-        getData();
-    </script>
     <div class="infoBox">
         <h3>Jump to:</h3>
         <ul class="nav">

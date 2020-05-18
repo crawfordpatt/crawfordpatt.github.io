@@ -1,3 +1,5 @@
+//API in progress
+/*
 const api_url = "http://corona-api.com/countries/US";
 async function getData() {
     const response = await fetch(api_url);
@@ -9,9 +11,10 @@ async function getData() {
     const confirmed = latestData.confirmed;
     const casesPerMillion = latestData.calculated.cases_per_million_population;
 
-    document.getElementById("deathsDiv").innerHTML = "Total Deaths (U.S): " + deaths;
-    document.getElementById("confirmedDiv").innerHTML = "Total US Confirmed Cases (U.S): " + confirmed;
-    document.getElementById("casesPerMillionDiv").innerHTML = "Cases per Million (U.S): " + casesPerMillion;
+    document.getElementById("deathsDiv") = "Total Deaths (U.S): " + deaths;
+    document.getElementById("confirmedDiv") = "Total US Confirmed Cases (U.S): " + confirmed;
+    document.getElementById("casesPerMillionDiv") = "Cases per Million (U.S): " + casesPerMillion;
 }
 
 getData();
+*/

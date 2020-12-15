@@ -2,3 +2,6 @@ body {
     text-align: center;
     font-size: large;
 }
+img {
+	block-size: 20%;
+}
